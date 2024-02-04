@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 14:59:32 by ismirand          #+#    #+#             */
-/*   Updated: 2023/11/11 17:41:25 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:22:50 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*get_ret(char *str)
 	int		i;
 
 	i = 0;
-	if (!*str)
+	if (str[i] == '\0')
 		return (NULL);
 	while (str[i] && str[i] != '\n')
 		i++;
@@ -126,7 +126,8 @@ int	main(void)
 	free (line);
 	close(fd);
 	return (0);
-	//linha 110 tem que ter para parar a str na quantidade que leu
+	//linha 81 limpa static na ultima linha
+	//linha 109 tira o lixo do buf
 	//s2[FOPEN_MAX]
 	//valgrind ./a.out
 } */
